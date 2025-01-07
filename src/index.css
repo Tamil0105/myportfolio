@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  @apply font-sans text-body font-normal leading-normal ;
+}
+
+h1 {
+  @apply font-sans text-header font-bold leading-tight ;
+}
+
+h2 {
+  @apply font-sans text-secondHeader font-medium leading-normal ;
+}
+
+p {
+  @apply font-sans text-body font-normal leading-relaxed ;
+}
+@layer utilities {
+    .clip-50 {
+        clip-path: circle(50% at 50% 50%);
+    }
+    .clip-0 {
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+html,
+body {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers like Chrome, Safari */
+}
+.scroll-container {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
