@@ -20,7 +20,7 @@ const WhyInventOG = () => {
       <h2
         className={`xl:text-[70px] ${inView?"animate-slideIn":""} text-4xl text-start  font-bold px-10  mt-10`}
       >
-        Why InventOG?
+        What I Do
       </h2>
       <div className="flex flex-col items-center">
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-10 mt-4 text-gray-200">

@@ -18,7 +18,7 @@ export const OurServicePage = () => {
     <InView
       as="div"
       id="service"
-      className="h-screen bg-white"
+      className="h-full bg-white  flex flex-col gap-10" 
       onChange={(inView) => {
         if (inView) {
           setCrossTextAnimation(true); // Trigger the effect when in view
@@ -34,7 +34,7 @@ export const OurServicePage = () => {
         <PixelCursorEffect>
         <div className="relative h-screen w-full text-center flex justify-center items-center">
           <motion.h2 className="xl:text-[100px] text-5xl font-sans absolute font-[600]">
-            INVENTOG CREATE
+            I AM CREATE
           </motion.h2>
           <motion.h2
             className="xl:text-[100px] text-5xl font-sans absolute font-[600]"
@@ -46,7 +46,7 @@ export const OurServicePage = () => {
             }
             transition={{ duration: 0.5 }}
           >
-            INVENTOG CREATE
+             I AM CREATE
           </motion.h2>
           <motion.h2
             className="xl:text-[100px] text-5xl font-sans absolute font-[600]"
@@ -58,7 +58,7 @@ export const OurServicePage = () => {
             }
             transition={{ duration: 0.5 }}
           >
-            INVENTOG CREATE
+             I AM CREATE
           </motion.h2>
         </div>
         </PixelCursorEffect>

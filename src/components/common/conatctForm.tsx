@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button2 from "./button2";
-import { MdOutlineAttachFile } from "react-icons/md";
+// import { MdOutlineAttachFile } from "react-icons/md";
 import {
   FaArrowRight,
   FaFacebookF,
@@ -13,7 +13,7 @@ type IFormInput = {
   name: string;
   email: string;
   phone: string;
-  company: string;
+  message: string;
   projectDetails: string;
   budget: string;
   finishedProject: string;
@@ -28,11 +28,11 @@ const ContactForm: React.FC = () => {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  const [budget, setBudget] = useState<string>("Under 10,000 €");
-  const [finishedProject, setFinishedProject] = useState<string>(
-    "We need it available"
-  );
-  const [_, setFiles] = useState<FileList | null>(null);
+  // const [budget,] = useState<string>("Under 10,000 €");
+  // const [finishedProject] = useState<string>(
+  //   "We need it available"
+  // );
+  const [] = useState<FileList | null>(null);
 
   const validateForm = (data: IFormInput) => {
     let isValid = true;
@@ -52,34 +52,34 @@ const ContactForm: React.FC = () => {
       });
       isValid = false;
     }
-    if (!data.company) {
-      setError("company", {
+    if (!data.message) {
+      setError("message", {
         type: "manual",
-        message: "Company name is required",
+        message: "Message  is required",
       });
       isValid = false;
     }
-    if (!data.projectDetails) {
-      setError("projectDetails", {
-        type: "manual",
-        message: "Project details are required",
-      });
-      isValid = false;
-    }
-    if (!budget) {
-      setError("budget", {
-        type: "manual",
-        message: "Budget selection is required",
-      });
-      isValid = false;
-    }
-    if (!finishedProject) {
-      setError("finishedProject", {
-        type: "manual",
-        message: "Finished project selection is required",
-      });
-      isValid = false;
-    }
+    // if (!data.projectDetails) {
+    //   setError("projectDetails", {
+    //     type: "manual",
+    //     message: "Project details are required",
+    //   });
+    //   isValid = false;
+    // }
+    // if (!budget) {
+    //   setError("budget", {
+    //     type: "manual",
+    //     message: "Budget selection is required",
+    //   });
+    //   isValid = false;
+    // }
+    // if (!finishedProject) {
+    //   setError("finishedProject", {
+    //     type: "manual",
+    //     message: "Finished project selection is required",
+    //   });
+    //   isValid = false;
+    // }
 
     return isValid;
   };
@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
   return (
     <div className="w-full xl:px-20 mx-auto">
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 px-2 xl:px-0">
-        <div className="border-b border-t border-black py-10">
+        <div className="border-b border-t border-black py-10 flex flex-col gap-5">
           <h2 className="text-3xl font-bold mb-4">Your contact information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <input
@@ -133,21 +133,29 @@ const ContactForm: React.FC = () => {
               <p className="text-red-500">{errors.phone.message}</p>
             )}
 
-            <input
+            {/* <input
               type="text"
-              placeholder="Company or project name"
+              placeholder="Message"
               className={`w-full p-5 shadow-xl rounded-full ${
-                errors.company ? "border border-red-500" : ""
+                errors.message ? "border border-red-500" : ""
               }`}
-              {...register("company")}
-            />
-            {errors.company && (
-              <p className="text-red-500">{errors.company.message}</p>
-            )}
+              {...register("message")}
+            /> */}
+           
           </div>
+          <textarea
+            placeholder="Message..."
+            className={`w-full p-4 shadow-xl rounded-2xl h-48 ${
+              errors.message ? "border-red-500" : ""
+            }`}
+            {...register("message")}
+          ></textarea>
+            {errors.message && (
+              <p className="text-red-500">{errors.message.message}</p>
+            )}
         </div>
-
-        <div className="border-b border-black">
+       
+        {/* <div className="border-b border-black">
           <h2 className="text-3xl font-bold mb-4">Budget</h2>
           <div className="flex flex-wrap gap-4  py-16">
             {[
@@ -169,9 +177,9 @@ const ContactForm: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        <h2 className="text-3xl font-bold mb-4">About the project</h2>
+        {/* <h2 className="text-3xl font-bold mb-4">About the project</h2>
         <div className="border-b border-black py-5">
           <textarea
             placeholder="Tell us more about your project"
@@ -211,8 +219,8 @@ const ContactForm: React.FC = () => {
               />
             </label>
           </div>
-        </div>
-        <div className="">
+        </div> */}
+        {/* <div className="">
           <h2 className="text-3xl font-bold mb-4">Finished project</h2>
           <div className="flex flex-wrap gap-1 py-16">
             {[
@@ -233,12 +241,12 @@ const ContactForm: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        <span className=" text-black font-bold">
+        {/* <span className=" text-black font-bold">
           By submitting this form you agree to{" "}
           <span className="underline">Privacy Policy </span> of Inventog team
-        </span>
+        </span> */}
         <div className="flex items-center justify-between gap-10 py-9 ">
           <span className="flex gap-4 justify-center items-center">
             <p className="uppercase text-3xl font-semibold">submit</p>

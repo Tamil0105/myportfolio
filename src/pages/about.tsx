@@ -1,5 +1,4 @@
 import { useInView } from "react-intersection-observer";
-import Button2 from "../components/common/button2";
 import { wholePageContent } from "../utils/pageContent";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 
@@ -16,7 +15,7 @@ export const About = () => {
         <div className="w-full xl:w-1/2 h-full flex   justify-center items-center xl:px-10 xl:py-10">
           <div className=" w-full xl:w-full    bg-gradient-to-r from-primary/20 to-primary/10 border-[4px] border-primary rounded-xl  shadow-xl py-12 px-2 rou   h-full  flex flex-col justify-center items-center">
             <img
-              src={"/about.png"}
+              src={"/Programmer-rafiki.svg"}
               alt={"about"}
               className={`h-auto max-h-[90vh] w-full object-cover transition duration-300 filter ${
                 inView ? "animate-zoomIn" : "animate-zoomOut"
@@ -42,10 +41,10 @@ export const About = () => {
             {/* <p className={`text-lg md:text-xl lg:text-3xl font-serif ${inView ? 'animate-slideIn' : ''}`}>
             {wholePageContent.about.content}
           </p> */}
-            <Button2
+            {/* <Button2
               classNames={`${inView ? "animate-slideIn" : "w-ful"}  px-12 py-2`}
               text={wholePageContent.about.buttonText}
-            />
+            /> */}
           </div>
         </div>
       </div>

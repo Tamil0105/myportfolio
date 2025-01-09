@@ -25,10 +25,9 @@ const LogoAnimation = ({ onComplete }:{onComplete:() =>void}) => {
       ></div>
       <p
         id="xyz"
-        className="absolute top-[50px] left-[85px] md:left-[115px] text-[40px] font-bold text-white animate-textreveal whitespace-nowrap overflow-hidden"
+        className="absolute top-[40px] left-[60px] md:left-[55px] text-[40px] font-bold text-white animate-textreveal whitespace-nowrap overflow-hidden"
       >
-    Inventog
-      </p>
+Tamilselvan      </p>
     </div>
   </div>
   );

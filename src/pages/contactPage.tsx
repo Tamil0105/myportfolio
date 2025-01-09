@@ -11,15 +11,15 @@ export const ContactPage = () => {
       <div className="w-full  h-full   xl:h-screen text-black  flex justify-end items-start flex-col gap-0 px-4   xl:px-32 ">
         <SlideUp
           className="xl:text-[80px]  text-[40px] font-[800]   "
-          text={"Tell us about"}
+          text={"I’m a  full-stack developer  "}
         />
         <SlideUp
           className="xl:text-[80px] text-[40px] font-[800]    "
-          text={"your next"}
+          text={"ready to bring your"}
         />
         <span className="flex gap-3">
           <AnimatedText
-            text="project"
+            text="ideas to life."
             className="xl:text-[80px]   justify-start items-start text-[40px] font-[800]   "
           />
         </span>
@@ -33,7 +33,7 @@ export const ContactPage = () => {
           <SlideUp
             className="xl:text-4xl text-lg     "
             text={
-              "Fill out our project form below and let's make your project dreams come true!"
+              "I'm a versatile full-stack developer. I bring ideas to life with innovative solutions. Let's build something amazing together."
             }
           />
         </div>

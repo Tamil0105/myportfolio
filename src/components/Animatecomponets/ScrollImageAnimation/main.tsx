@@ -38,6 +38,7 @@ interface ScrollImageProps {
   src: string;
   alt?: string;
   text?:string;
+  textColor?:string;
   onClick?:() =>void;
   className?: string;
   containerClassName?: string;
@@ -73,7 +74,8 @@ const ScrollImage: React.FC<ScrollImageProps> = ({
   containerClassName = "",
   text="",
   config = {},
-  onClick
+  onClick,
+  textColor
 }) => {
   // Merge default and provided configurations
   const [isHovered, setIsHovered] = useState(false);
@@ -178,7 +180,7 @@ const ScrollImage: React.FC<ScrollImageProps> = ({
       >
        {isVisible && (
         <span
-          className={`text-white text-[80px] flex-wrap  w-[50%] font-[1000] absolute mx-auto transition-all duration-300 ${
+          className={`${textColor?textColor:'text-primary'}  text-[80px] flex-wrap  w-[50%] font-[1000] absolute mx-auto transition-all duration-300 ${
             isHovered ? 'animate-slideIn' : 'animate-slideOut'
           }`}
         >

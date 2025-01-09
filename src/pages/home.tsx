@@ -24,18 +24,21 @@ export const Home = () => {
                 </div>
             {showContent && (
                 <div className="flex relative z-0 flex-col lg:flex-col  gap-10 xl:flex-row justify-center items-center w-full min-h-full pt-32 px-0 lg:px-1 md:px-10 xl:px-28">
-                    <div className='xl:w-[65%] w-full md:px-0 px-6 text-md'>
-                        <span className='flex  justify-start flex-col items-start font-serif w-full overflow-hidden'>
-                            <span className='md:text-[90px] text-5xl text-black font-bold'>
-                                {wholePageContent.home.text1}
-                            </span>
-                            <TextAnimation texts={wholePageContent.home.animateText} />
-                            <span className='md:text-[90px] text-5xl text-black font-bold'>
+                    <div className='xl:w-[70%] w-full md:px-0 px-6 text-md'>
+                        <span className='flex  justify-start flex-col items-start gap-7  w-full overflow-hidden'>
+                         
+                            
+                            <span className='md:text-[75px] text-5xl text-black font-bold'>
                                 {wholePageContent.home.text2}
+                            </span>
+
+                            <TextAnimation texts={wholePageContent.home.animateText} />
+                            <span className='md:text-[75px] text-5xl text-black font-bold'>
+                                {wholePageContent.home.text1}
                             </span>
                         </span>
                     </div>
-                    <div className='xl:w-[35%] w-full h-full xl:px-0 px-3'>
+                    <div className='xl:w-[30%] w-full h-full xl:px-0 px-3'>
                         <ColosseumComponent />
                     </div>
                 </div>

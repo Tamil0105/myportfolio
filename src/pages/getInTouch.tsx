@@ -28,14 +28,14 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
             <p className="text-2xl text-wrap font-display font-semibold h-10">
               <SlideUp
                 text={
-                  "Provide us with project information and reach out to our team."
+                  "If you would like to hire me, please feel free to reach out."
                 }
               />
             </p>
             <Button3
              bgColor={bgColor}
               classNames={`border-white ${inView ? "animate-slideIn" : ""}`}
-              text={"contact us"}
+              text={"contact me"}
             />
           </div>
         </div>
@@ -65,7 +65,7 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
           <EmailLink />
         </span>
         <span className="font-semibold cursor-pointer">
-          Inventog.com 2024© All rights reserved
+          tamil1633@gmail.com 2024© All rights reserved
         </span>
       </div>
     </div>

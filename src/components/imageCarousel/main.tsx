@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaLaptopCode, FaBoxOpen, FaMobileAlt } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaCode, FaLaptopCode, FaBoxOpen } from 'react-icons/fa'; // Importing icons from react-icons
 
 const ColosseumComponent: React.FC = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -9,23 +9,23 @@ const ColosseumComponent: React.FC = () => {
     {
       title: 'Web Development',
       icon: <FaCode />, // Use the icon component directly
-      image: '/home/fullmen.png',
+      image: '/bannerImgLeft.webp',
     },
     {
       title: 'Web Applications',
       icon: <FaLaptopCode />,
-      image: '/home/menWithlap.png',
+      image: '/bannerImgLeft.webp',
     },
     {
       title: 'Web Products',
       icon: <FaBoxOpen />,
-      image: '/home/womenWithLap.png',
+      image: '/bannerImgLeft.webp',
     },
-    {
-      title: 'Mobile Apps',
-      icon: <FaMobileAlt />,
-      image: '/home/fullmen.png',
-    },
+    // {
+    //   title: 'Mobile Apps',
+    //   icon: <FaMobileAlt />,
+    //   image: '/home/bannerImgLeft.webp',
+    // },
   ];
 
   const handleNextSlide = () => {
@@ -49,7 +49,7 @@ const ColosseumComponent: React.FC = () => {
       <img
         src={slides[slideIndex].image}
         alt={slides[slideIndex].title}
-        className="absolute z-30 bottom-12 inset-0  animate-slideIn h-[53vh] xl:h-full w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
+        className="absolute z-30 bottom-12 inset-0  animate-slideIn h-[53vh] xl:h-[62vh] w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
       />
         <motion.div
          initial={{ scale: 0 }}
@@ -82,7 +82,7 @@ const ColosseumComponent: React.FC = () => {
       >
         <span className='flex gap-1 items-center'>
         <div className=" text-2xl font-bold  bg-white p-1 rounded-xl text-primary">{slides[slideIndex].icon}</div> 
-        <div className="text-white text-2xl font-bold px-4 ">{slides[slideIndex].title}</div> 
+        <div className="text-white text-xl font-bold px-4 ">{slides[slideIndex].title}</div> 
         </span>
 
 

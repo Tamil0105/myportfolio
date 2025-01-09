@@ -8,8 +8,7 @@ const EmailLink = () => {
         whileHover={{ color: '#1d4ed8', scale: 1.05 }} // Change text color and scale on hover
         transition={{ duration: 0.3 }} // Smooth transition for text color and scale
       >
-        office@Inventog.com
-      </motion.span>
+tamil1633@gmail.com       </motion.span>
       <motion.div
         className="absolute left-0 bottom-0 h-1 bg-black" // Initial border color
         initial={{ width: 0 }} // Start with width 0 (hidden)

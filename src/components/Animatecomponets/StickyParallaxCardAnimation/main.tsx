@@ -2,50 +2,69 @@ import { useScroll, motion, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import Card from './card';
-import { FaLaptopCode, FaCogs, FaSearch, FaRegClock, FaShieldAlt, FaUsers } from 'react-icons/fa';
+import { SiTypescript,SiAmazonwebservices } from "react-icons/si";
+import { ImSphere } from "react-icons/im";
+import {  FaReact, FaNode, FaDatabase } from 'react-icons/fa';
 
 const projects = [
     {
-      icon: <FaLaptopCode className="text-indigo-500 h-28 w-28" />,
-      title: "Cutting-Edge Technology",
+      icon: <FaReact className="text-indigo-500 h-28 w-28"/>,
+      title: "Frontend Development",
       color: "#e2fdff", // Light Blue
       description:
-        "We leverage the latest tools and frameworks to build solutions that are scalable, secure, and future-ready.",
+        "Building responsive and interactive user interfaces using HTML, CSS, and JavaScript and, React js and Next js ",
     },
+
+    // {
+    //   icon: <FaCogs className="text-green-500 h-28 w-28" />,
+    //   title: "React Development",
+    //   color: "#bfd7ff", // Dark Blue
+    //   description:
+    //     "Creating dynamic and high-performing web applications using React.js.",
+    // },
+
     {
-      icon: <FaCogs className="text-green-500 h-28 w-28" />,
-      title: "Tailored Solutions",
-      color: "#bfd7ff", // Dark Blue
-      description:
-        "Our services are customized to meet your specific business objectives.",
-    },
-    {
-      icon: <FaSearch className="text-red-500 h-28 w-28" />,
-      title: "SEO-Optimized Development",
+      icon: <FaNode className="text-red-500 h-28 w-28" />,
+      title: "Backend Development",
       color: "#9bb1ff", // Light Blue
       description:
-        "Websites and apps designed to rank higher on search engines, driving organic traffic and visibility.",
+        "Developing scalable server-side applications and RESTful APIs using Node.js.",
     },
+
     {
-      icon: <FaRegClock className="text-yellow-500 h-28 w-28" />,
-      title: "Timely Delivery",
+      icon: <SiTypescript className="text-yellow-500 h-28 w-28" />,
+      title: "Type Script",
       color: "#788bff", // Dark Blue
       description:
-        "Your time is valuable. We stick to deadlines without compromising on quality.",
+        "Using TypeScript in both backend (Node.js) and frontend development ensures code consistency, ",
     },
+    // {
+    //   icon: <FaShieldAlt className="text-blue-500 h-28 w-28" />,
+    //   title: "Enhanced Security",
+    //   color: "#5465ff", // Light Blue
+    //   description:
+    //     "Our solutions are built with industry-leading security measures to protect your data and users.",
+    // },
     {
-      icon: <FaShieldAlt className="text-blue-500 h-28 w-28" />,
-      title: "Enhanced Security",
-      color: "#5465ff", // Light Blue
-      description:
-        "Our solutions are built with industry-leading security measures to protect your data and users.",
-    },
-    {
-      icon: <FaUsers className="text-purple-500 h-28 w-28" />,
-      title: "User -Centric Design",
+      icon: <FaDatabase className="text-purple-500 h-28 w-28" />,
+      title: "Database Management",
       color: "#3559E0", // Dark Blue
       description:
-        "Delivering intuitive and engaging user experiences tailored to your audience.",
+        "Designing and managing databases using SQL and NoSQL database systems.",
+    },
+    {
+      icon: <ImSphere className="text-purple-500 h-28 w-28" />,
+      title: "Web Hosting",
+      color: "#3559E0", // Dark Blue
+      description:
+        "Deploying and managing web applications on various hosting platforms.",
+    },
+    {
+      icon: <SiAmazonwebservices className="text-yellow-500 h-28 w-28" />,
+      title: "AWS Services",
+      color: "#3559E0", // Dark Blue
+      description:
+        "Utilizing AWS services for cloud computing, storage, and deployment.",
     },
   ];
 
@@ -85,7 +104,7 @@ const projects = [
             borderBottomRightRadius: radiusBottom,
           }}
         >
-          <p className="xl:text-[70px] text-2xl leading-relaxed text-white font-[900]">Why Inventog?</p>
+          <p className="xl:text-[70px] text-2xl leading-relaxed text-white font-[900]">What I Do?</p>
         </motion.div>
         <motion.div
           className="w-full sticky   xl:hidden  top-2 px-5 bg-primary flex justify-center items-center"
@@ -95,7 +114,7 @@ const projects = [
             borderBottomLeftRadius: radiusBottom,
           }}
         >
-          <p className="xl:text-[70px] text-2xl leading-relaxed text-white font-[900]">Why Inventog?</p>
+          <p className="xl:text-[70px] text-2xl leading-relaxed text-white font-[900]">What I Do?</p>
         </motion.div>
         <div className="flex flex-col h-[600vh] justify-center xl:justify-end items-center  xl:items-end">
           {projects.map((project, i) => {
