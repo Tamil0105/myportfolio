@@ -3,8 +3,6 @@ import { useInView } from "react-intersection-observer";
 import { BsArrowDown } from "react-icons/bs";
 import BottomToTopScreenOpenAnimation from "../../components/Animatecomponets/BottomToTopScreenOpenAnimation/main";
 import { GetInTouch } from "../getInTouch";
-import { useEffect } from "react";
-
 const GameOnSolution = () => {
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger when 10% of the component is in view
