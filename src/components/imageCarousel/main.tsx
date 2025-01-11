@@ -44,21 +44,32 @@ const ColosseumComponent: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-[65vh] p-4 py-4  rounded-xl overflow-hidden animate-floating"> {/* Add floating effect */}
+    <div className="relative h-[65vh] p-4 py-4   rounded-xl overflow-hidden animate-floating"> {/* Add floating effect */}
       {/* Background Image */}
-      <img
-        src={slides[slideIndex].image}
-        alt={slides[slideIndex].title}
-        className="absolute z-30 bottom-12 inset-0  animate-slideIn h-[53vh] xl:h-[62vh] w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
-      />
+     
         <motion.div
          initial={{ scale: 0 }}
          animate={{ scale: 1 }}
          transition={{ duration: 0.5 }}
          className="z-10 absolute  h-[80%] w-[80%] rounded-xl opacity-80"
         >
+
+          
 {/* <FaCode/> */}
         </motion.div>
+        <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="z-50 absolute top-12 left-12  overflow-hidden  bg-primary/20    h-[80%] w-[75%] rounded-xl  shadow-md  border-slate-400/30  opacity-80"
+      >
+         <img
+        src={slides[slideIndex].image}
+        alt={slides[slideIndex].title}
+        className="absolute inset-0    animate-slideIn h-[60vh] xl:h-[55vh] w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
+      />
+      
+      </motion.div>
       {/* Background Layer */}
       <motion.div
         initial={{ scale: 0 }}
@@ -66,6 +77,8 @@ const ColosseumComponent: React.FC = () => {
         transition={{ duration: 0.5 }}
         className="z-10 absolute bg-primary/80 h-[80%] w-[75%] rounded-xl opacity-80"
       />
+
+
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -75,11 +88,12 @@ const ColosseumComponent: React.FC = () => {
 
       {/* Slider Content with Icons */}
       <motion.div
-        className="z-40 absolute  -bottom-40 left-24 w-full h-1/2 rounded-xl  flex items-start justify-start"
+        className="z-50 absolute  -bottom-32 left-16 w-full h-1/2 rounded-xl  flex items-start justify-start"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
+        
         <span className='flex gap-1 items-center'>
         <div className=" text-2xl font-bold  bg-white p-1 rounded-xl text-primary">{slides[slideIndex].icon}</div> 
         <div className="text-white text-xl font-bold px-4 ">{slides[slideIndex].title}</div> 
