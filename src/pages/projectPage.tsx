@@ -6,10 +6,11 @@ import { wholePageContent } from "../utils/pageContent";
 import { useInView } from "react-intersection-observer";
 import ProjectGallery from "../components/Animatecomponets/ImageScreenAnimation/projectGallery";
 import useCounterStore from "../store/animateScreen";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectPage = () => {
   const { setHovered, setLinkHovered } = useCounterStore();
-
+   const navigate =useNavigate()
 
   const { ref, inView } = useInView({
     threshold: 0.3, // Adjust as needed
@@ -17,7 +18,7 @@ export const ProjectPage = () => {
   });
   const imageData = [
     {
-      description: "Platform for court bookings at sports facilities",
+      description: "Platform for court building at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
         "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
@@ -86,6 +87,8 @@ export const ProjectPage = () => {
   ];
   return (
     <div
+    id='projects'
+
     // Set hover state to true on mouse enter
      className="flex justify-center  flex-col items-center h-full  px-0    ">
       <div
@@ -136,34 +139,37 @@ export const ProjectPage = () => {
         ))}
       </div> */}
       <div className=" xl:hidden lg:flex md:flex flex scroll-container overflow-x-auto w-screen p-4 space-x-4">
-        {wholePageContent.work.projectsData.map((data, index) => {
+        {imageData.map((data, index) => {
           return (
             <HorizontalScroll key={index}>
               <div
                 ref={ref}
                 className={`relative ${
                   inView ? "animate-zoomIn" : ""
-                }  rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[50vh] lg:h-[40vh]`}
+                }  rounded-2xl border  flex shadow-xl overflow-hidden w-full h-[56vh] md:h-[50vh] lg:h-[40vh]`}
               >
                 <img
-                  src="https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
+                  src={data.imageUrl}
                   alt="Two people smiling and working on a laptop"
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute text-white h-full flex flex-col gap-52 justify-between">
+                <span className={`absolute w-full bg-black/30 text-white h-full flex flex-col gap-52 justify-between`}>
                   <span className="flex gap-4 p-7 flex-col justify-start items-start">
                     <h2 className="text-4xl text-wrap w-[60%] font-bold">
-                      {data.initialText}.
+                      {data.title}.
                     </h2>
                     <p className=" text-wrap text-lg font-semibold w-[60%]">
                       {" "}
-                      Digital design & smart production agency
+                     {data.description}
                     </p>
                   </span>
                   <span></span>
                 </span>
                 <span className="flex absolute bottom-6   w-full  left-12 ">
                   <Button2
+                   onClick={() =>{
+                    navigate(data.path)
+                   }}
                     classNames="px-7 py-2 absolute"
                     text={wholePageContent.work.buttonText}
                   />

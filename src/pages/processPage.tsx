@@ -10,24 +10,24 @@ export const ProcessPage = () => {
       <div className="w-full    xl:h-screen text-black  flex justify-end items-start flex-col gap-0  ">
         <SlideUp
           className="xl:text-[80px] text-white text-[40px] font-[800] animate-slideIn   "
-          text={"Process of crafting"}
+          text={"A Path "}
         />
 
         <span className="flex flex-col xl:flex-row gap-3">
           <AnimatedText
-            text="memorable"
+            text="Paved "
             className="xl:text-[80px]  animate-slideIn  justify-start items-start text-[40px] font-[800] text-white  "
           />
           <SlideUp
              
             className="xl:text-[80px] text-[40px] font-[800] animate-slideIn text-white   "
-            text={"brands "}
+            text={"with "}
           />
         </span>
 
         <SlideUp
           className="xl:text-[80px] text-[40px] font-[800] animate-slideIn text-white   "
-          text={"and experiences."}
+          text={"Knowledge and Experience"}
         />
       </div>
       <div className="w-full flex flex-col justify-center items-center">
@@ -40,7 +40,7 @@ export const ProcessPage = () => {
             firstContent={
 data.description            }
             secondContent={
-              "Defining project goals and objectives onducting research and analysis Establishing user personas and scenarios Content strategy and planning Defining technica"
+              ""
             }
           />)
         })}

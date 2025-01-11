@@ -32,20 +32,20 @@ function App() {
     { id: "home", color: "bg-white" },
     { id: "about", color: "bg-white" },
     { id: "service", color: "bg-white" },
-    
     { id: "WhyInventOGBefore", color: "bg-gray-950" },
     { id: "WhyInventOGAfter", color: "bg-gray-950" },
     { id: "work-header", color: "bg-gray-100" },
     { id: "work", color: "bg-gray-200" },
-    { id: "process", color: "bg-gray-950" },
+    { id: "knowledge", color: "bg-gray-950" },
 
   ];
   const nav1 = [
     { id: "home", color: "bg-primary" },
     { id: "about", color: "bg-primary" },
     { id: "work-header", color: "bg-primary" },
+    { id: "projects", color: "bg-primary" },
     { id: "work", color: "bg-primary" },
-    { id: "process", color: "bg-primary" },
+    { id: "knowledge", color: "bg-primary" },
     { id: "WhyInventOGBefore", color: "bg-white" },
     { id: "WhyInventOGAfter", color: "bg-white" },
     { id: "getInTouch", color: "bg-white" },
@@ -102,7 +102,7 @@ function App() {
                         </div>{" "}
                         <Work />
                       </div>
-                      <div id="process">
+                      <div id="knowledge">
                         <ProcessAndApproach />
                       </div>
                       <OurServicePage />
@@ -113,14 +113,14 @@ function App() {
                 <Route
                   path="/projects"
                   element={
-                    <div className=" bg-white">
+                    <div id="projects" className=" bg-white">
                       <ProjectPage />
                       <GetInTouch />
                     </div>
                   }
                 />
                 <Route
-                  path="/process"
+                  path="/knowledge"
                   element={
                     <div className=" bg-black">
                       <ProcessPage />
@@ -144,7 +144,6 @@ function App() {
                     </div>
                   }
                 />  
-                    //projects
                 <Route
                   path="/projects/game-on-solution"
                   element={

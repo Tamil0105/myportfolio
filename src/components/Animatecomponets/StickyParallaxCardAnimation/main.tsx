@@ -50,7 +50,7 @@ const projects = [
       title: "Database Management",
       color: "#3559E0", // Dark Blue
       description:
-        "Designing and managing databases using SQL and NoSQL database systems.",
+        "Designing and managing databases using SQL,PSQL and NoSQL database systems.",
     },
     {
       icon: <ImSphere className="text-purple-500 h-28 w-28" />,

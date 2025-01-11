@@ -3,6 +3,7 @@ import EmailLink from "../components/Animatecomponets/EmailLink/main";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 import Button3 from "../components/common/button3";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 
 export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
@@ -10,6 +11,7 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
     threshold: 0.3, // Adjust as needed
     triggerOnce: true, // Only trigger once
   });
+  const navigate =  useNavigate()
   return (
     <div ref={ref} id={"getInTouch"}>
  
@@ -33,6 +35,9 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
               />
             </p>
             <Button3
+             onClick={() =>[
+              navigate('/contact')
+             ]}
              bgColor={bgColor}
               classNames={`border-white ${inView ? "animate-slideIn" : ""}`}
               text={"contact me"}

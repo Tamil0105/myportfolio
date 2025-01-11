@@ -57,7 +57,7 @@ export const ContactPage = () => {
 
           </span>
           <span className="font-semibold cursor-pointer">
-          Inventog.com 2024©  All rights reserved
+          tamil1633@gmail.com 2024© All rights reserved
           </span>
       </div>
 

@@ -34,7 +34,75 @@ export const Work = () => {
   //   threshold: 0.3, // Adjust as needed
   //   triggerOnce: true, // Only trigger once
   // });
+  const imageData = [
+    {
+      description: "Platform for court building at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+      backgroundColor: "#1D4ED8",
+      title: "Game On Solution",
+      path:"game-on-solution"
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "/gozencal.png",
+      backgroundColor: "#1D4ED8",
+      title: "GoZen Cal",
+      path: "gozen-cal",
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "/formsGozen.jpg",
+      backgroundColor: "#1D4ED8",
+      title: "GoZen Forms",
+      path: "gozen-forms",
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "/rental1.png",
+      backgroundColor: "#1D4ED8",
+      title: "Selvam Rental Management",
+      path:"game-on-solution"
 
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+      backgroundColor: "#1D4ED8",
+      title: "Assessment",
+      path:"assessment"
+
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "/ai-componet-generator.png",
+      backgroundColor: "#1D4ED8",
+      title: "Ai-Components-Generator",
+      path:"ai-components-generator"
+
+    },
+    {
+      description: "Platform for court bookings at sports facilities",
+      category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+      imageUrl:
+        "/book-app.png",
+      backgroundColor: "#1D4ED8",
+      title: "Booking App",
+      path:"booking-app"
+
+    },
+  ];
   return (
     <div
       id="work"
@@ -114,7 +182,7 @@ export const Work = () => {
       </div>
 
       <div className=" xl:hidden lg:flex md:flex flex scroll-container overflow-x-auto w-screen p-4 space-x-4">
-        {wholePageContent.work.projects.map((data, index) => {
+        {imageData.map((data, index) => {
           return (
             <HorizontalScroll key={index}>
               <div className={`relative   rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[45vh] lg:h-[35vh]`}>
@@ -123,13 +191,12 @@ export const Work = () => {
                   alt="Two people smiling and working on a laptop"
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute text-white h-full flex flex-col gap-52 justify-between">
+                <span className="absolute bg-black/30 text-white h-full flex flex-col gap-52 justify-between">
                   <span className="flex gap-4 p-7 flex-col justify-start items-start">
                     <h2 className="text-4xl text-wrap w-[60%] font-bold">{data.title}.</h2>
                     <p className=" text-wrap text-lg font-semibold w-[60%]">
                       {" "}
-                      Digital design & smart production 
-                      {data.path}
+                      {data.description}
                     </p>
                   </span>
                   <span></span>

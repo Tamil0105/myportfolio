@@ -57,9 +57,9 @@ const GameOnSolution = () => {
       path: "game-on-solution",
     },
   ];
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}, []); 
+//   useEffect(() => {
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+// }, []); 
   return (
     <div
       id={"gameOnSolution"}

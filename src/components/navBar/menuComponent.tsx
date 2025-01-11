@@ -33,7 +33,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
     };
   }, [isExpanded]);
 
-  const menuOptions = ["Home","Projects", "Process", "Team", "Contact"];
+  const menuOptions = ["Home","Projects", "Knowledge", "Contact"];
 
   useEffect(() => {
     if (isExpanded) {
@@ -120,7 +120,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                 <span
                   onClick={() => {
                     setActive();
-                    option=="Home"?navigate('/'):navigate(`/${option.toLowerCase()}`);
+                    option=="Home"?navigate(''):navigate(`/${option.toLowerCase()}`);
                   }}
                   className="relative z-10"
                 >
