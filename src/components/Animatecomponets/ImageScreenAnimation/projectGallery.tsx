@@ -11,6 +11,7 @@ interface ImageData {
   backgroundColor: string;
   title: string;
   path: string;
+  windowOpen:boolean
 }
 
 interface ProjectGalleryProps {
@@ -95,13 +96,13 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ imageData }) => {
           }}
           onAnimationComplete={() => {
             if (isPaddingAnimationActive) {
-              navigate(data.path)
-            }
+              data.windowOpen?window.open(data.path):
+              navigate(data.path)            }
           }}
           transition={{ duration: 0.6 }} // Duration of the transition
           key={index}
           onClick={() =>{
-            console.log(data.path)
+            data.windowOpen?window.open(data.path):
             navigate(data.path)
               handleImageClick(index)}}
           ref={(el) => (imageRefs.current[index] = el)} // Store reference to each image card

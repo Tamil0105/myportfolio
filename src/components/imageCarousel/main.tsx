@@ -61,12 +61,12 @@ const ColosseumComponent: React.FC = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="z-50 absolute top-12 left-12  overflow-hidden  bg-primary/20    h-[80%] w-[75%] rounded-xl  shadow-md  border-slate-400/30  opacity-80"
+        className="z-40 bg-primary/20  absolute top-12 left-12  overflow-hidden     h-[80%] w-[75%] rounded-xl  shadow-md  border-slate-400/30  opacity-80"
       >
          <img
         src={slides[slideIndex].image}
         alt={slides[slideIndex].title}
-        className="absolute inset-0    animate-slideIn h-[60vh] xl:h-[55vh] w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
+        className="absolute inset-0    animate-slideIn h-[60vh] xl:h-[57vh] w-full object-cover transition duration-300 filter grayscale hover:grayscale-0"
       />
       
       </motion.div>
@@ -88,7 +88,7 @@ const ColosseumComponent: React.FC = () => {
 
       {/* Slider Content with Icons */}
       <motion.div
-        className="z-50 absolute  -bottom-32 left-16 w-full h-1/2 rounded-xl  flex items-start justify-start"
+        className="z-50 absolute   -bottom-32 left-16 w-full h-1/2 rounded-xl  flex items-start justify-start"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}

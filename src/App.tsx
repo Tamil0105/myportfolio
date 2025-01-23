@@ -21,7 +21,9 @@ import {
 } from "./pages";
 import StickyCards from "./components/Animatecomponets/StickyParallaxCardAnimation/main";
 import GameOnSolution from "./pages/projects/gameOnSolution";
-import SriViswaCharityTrust from "./pages/projects/sriVisawacharitableTrust";
+import GozenCal from "./pages/projects/gozenCal";
+import GozenForm from "./pages/projects/gozenForm";
+import RentalManageMent from "./pages/projects/rentalManageMent";
 
 
 function App() {
@@ -50,7 +52,7 @@ function App() {
     { id: "WhyInventOGAfter", color: "bg-white" },
     { id: "getInTouch", color: "bg-white" },
     { id: "gameOnSolution", color: "bg-[#febc12]" },
-    { id: "SriViswaCharityTrust", color: "bg-[#16a249]" },
+    { id: "rentalmanagement", color: "bg-[#16a249]" },
 
 
   ];
@@ -150,10 +152,22 @@ function App() {
                   <GameOnSolution/>
                   }
                 />
-                  <Route
-                  path="/projects/sri-viswa-charitable-trust"
+                 <Route
+                  path="/projects/gozen-cal"
                   element={
-                  <SriViswaCharityTrust/>
+                  <GozenCal/>
+                  }
+                />
+                  <Route
+                  path="/projects/gozen-forms"
+                  element={
+                  <GozenForm/>
+                  }
+                />
+                  <Route
+                  path="/projects/rental-management"
+                  element={
+                  <RentalManageMent/>
                   }
                 />
                 

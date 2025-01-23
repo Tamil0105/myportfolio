@@ -2,6 +2,7 @@ import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface BottomToTopScreenOpenAnimationProps {
+  type?:'image'|'video'
   imageUrl?: string;
   className?: string;
   openScreenEnable?: boolean;
@@ -19,7 +20,9 @@ const BottomToTopScreenOpenAnimation: React.FC<
   children,
   openScreenEnable = true,
   onClick,
+  type='image'
 }) => {
+  
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimateComplete, setAnimateComplete] = useState(true);
   const [isOpen, setIsOpen] = useState(true);
@@ -80,23 +83,46 @@ const BottomToTopScreenOpenAnimation: React.FC<
         ></motion.div>
       )}
     
-        <motion.img
-          src={imageUrl}
-          className="z-0"
-          alt="Your Image"
-          initial={{ scale: 2 }} // Start at scale 1
-          animate={isVisible && isOpen ? { scale: 1 } : { scale: 2 }} // Scale up when open
-          exit={{ scale: 0 }} // Scale down when exiting
-          transition={{ duration: 1 }}
-          style={{
-            position: "absolute",
-            width: " 100%",
-            height: "100%",
-            objectFit: "cover",
-            top: 0,
-            left: 0,
-          }}
-        />
+       {type==='image'?
+           <motion.img
+           src={imageUrl}
+           className="z-0"
+           alt="Your Image"
+           initial={{ scale: 2 }} // Start at scale 1
+           animate={isVisible && isOpen ? { scale: 1 } : { scale: 2 }} // Scale up when open
+           exit={{ scale: 0 }} // Scale down when exiting
+           transition={{ duration: 1 }}
+           style={{
+             position: "absolute",
+             width: " 100%",
+             height: "100%",
+             objectFit: "cover",
+             top: 0,
+             left: 0,
+           }}
+         />:
+         <motion.video
+         src={imageUrl}
+         className="z-0"
+         initial={{ scale: 2 }} // Start at scale 1
+         animate={isVisible && isOpen ? { scale: 1 } : { scale: 2 }} // Scale up when open
+         exit={{ scale: 0 }} // Scale down when exiting
+         transition={{ duration: 1 }}
+         autoPlay
+         muted
+         loop // Optional: to make the video play continuously
+         style={{
+           position: "absolute",
+           width: "100%",
+           height: "100%",
+           objectFit: "cover",
+           top: 0,
+           left: 0,
+         }}
+       />
+       
+        } 
+   
       
       {isAnimateComplete && children}
     </div>

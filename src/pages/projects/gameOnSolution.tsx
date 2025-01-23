@@ -3,7 +3,11 @@ import { useInView } from "react-intersection-observer";
 import { BsArrowDown } from "react-icons/bs";
 import BottomToTopScreenOpenAnimation from "../../components/Animatecomponets/BottomToTopScreenOpenAnimation/main";
 import { GetInTouch } from "../getInTouch";
+import useCounterStore from "../../store/animateScreen";
+import { useNavigate } from "react-router-dom";
 const GameOnSolution = () => {
+  const { setLinkHovered,setHovered} = useCounterStore();
+ const navigate = useNavigate()
   const { ref, inView } = useInView({
     threshold: 0.1, // Trigger when 10% of the component is in view
     triggerOnce: true, // Only trigger once
@@ -13,7 +17,7 @@ const GameOnSolution = () => {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/gameonsolution/1.png",
       backgroundColor: "#febc12",
       title: "Game On Solution",
       path: "game-on-solution",
@@ -22,7 +26,7 @@ const GameOnSolution = () => {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/gameonsolution/2.png",
       backgroundColor: "#febc12",
       title: "Click to Close",
       path: "game-on-solution",
@@ -31,7 +35,7 @@ const GameOnSolution = () => {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/gameonsolution/3.png",
       backgroundColor: "#febc12",
       title: "Click to Close",
       path: "game-on-solution",
@@ -40,7 +44,7 @@ const GameOnSolution = () => {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/gameonsolution/4.png",
       backgroundColor: "#febc12",
       title: "Click to Close",
       path: "game-on-solution",
@@ -49,7 +53,7 @@ const GameOnSolution = () => {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/gameonsolution/5.png",
       backgroundColor: "#febc12",
       title: "Click to Close",
       path: "game-on-solution",
@@ -59,7 +63,10 @@ const GameOnSolution = () => {
 //     window.scrollTo({ top: 0, behavior: "smooth" });
 // }, []); 
   return (
+
     <div
+    onMouseEnter={() =>setLinkHovered(false)}
+
       id={"gameOnSolution"}
       className="bg-[#0f150e] text-white border-white relative h-full"
     >
@@ -139,17 +146,7 @@ const GameOnSolution = () => {
               DESCRIPTION
             </button>
             <p className="text-2xl leading-relaxed">
-              Case 3D is a{" "}
-              <span className="font-bold text-[#febc12]">proptech company</span>{" "}
-              from Serbia, Novi Sad, which provides technology that makes home
-              buying intelligent and seamless. We were asked to create a new{" "}
-              <span className="font-bold text-[#febc12]">
-                presentation website
-              </span>
-              . From the start of the project, we knew we wanted to create an
-              absolutely stunning website. Our client’s willingness to give us
-              total creative freedom was crucial, and boosted our motivation to
-              produce something unseen at the time.
+            GameOn Solution specializes in constructing sports grounds, artificial football turf, cricket pitches, volleyball courts, basketball courts, and badminton courts, primarily serving customers in South India. GameOn Solution offers a comprehensive range of services, including building turf grounds, athletic tracks, and sports flooring solutions.
             </p>
             <div className="flex justify-end mt-4">
               <div className="w-2 h-2 bg-gold rounded-full"></div>
@@ -171,74 +168,22 @@ const GameOnSolution = () => {
           ))}
         </div>
         <BottomToTopScreenOpenAnimation
+           type="video"
           className="xl:h-screen h-[50%] w-full"
           backgroundColor={"#0000"}
           imageUrl={
-            "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
-          }
-        />
-        <div className="xl:px-36 px-5  flex flex-col  ">
-          <div className="xl:w-[60%] flex flex-col gap-10 w-full">
-            <button className="border border-[#febc12] text-[#febc12] rounded-full px-4 py-2  w-full xl:w-[30%]">
-              DESCRIPTION
-            </button>
-            <p className="text-2xl leading-relaxed">
-              Case 3D is a{" "}
-              <span className="font-bold text-[#febc12]">proptech company</span>{" "}
-              from Serbia, Novi Sad, which provides technology that makes home
-              buying intelligent and seamless. We were asked to create a new{" "}
-              <span className="font-bold text-[#febc12]">
-                presentation website
-              </span>
-              . From the start of the project, we knew we wanted to create an
-              absolutely stunning website. Our client’s willingness to give us
-              total creative freedom was crucial, and boosted our motivation to
-              produce something unseen at the time.
-            </p>
-            <div className="flex justify-end mt-4">
-              <div className="w-2 h-2 bg-gold rounded-full"></div>
-            </div>
-          </div>
-        </div>
-        <div className="xl:px-16 px-5  flex-col flex gap-14 justify-center items-center">
-          {imageData.map((data, index) => (
-            <motion.div
-              key={index}
-              className="flex xl:h-[90vh]  h-[23vh] justify-center items-center w-full xl:w-[80%]" // Center the image card
-            >
-              <BottomToTopScreenOpenAnimation
-                className="h-full w-full shadow-xl rounded-3xl"
-                backgroundColor={data.backgroundColor}
-                imageUrl={data.imageUrl}
-              />
-            </motion.div>
-          ))}
-        </div>
-        <BottomToTopScreenOpenAnimation
-          className="xl:h-screen h-[50%] w-full"
-          backgroundColor={"#febc12"}
-          imageUrl={
-            "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
+            "/gameonsolution/v1.mp4"
           }
         />
 
+
         <div className="xl:px-36 px-5  flex flex-col  ">
           <div className="xl:w-[60%] flex flex-col gap-10 w-full">
-            <button className="border border-[#febc12] text-[#febc12] rounded-full px-4 py-2  w-full xl:w-[30%]">
+            {/* <button className="border border-[#febc12] text-[#febc12] rounded-full px-4 py-2  w-full xl:w-[30%]">
               DESCRIPTION
-            </button>
+            </button> */}
             <p className="text-2xl leading-relaxed">
-              Case 3D is a{" "}
-              <span className="font-bold text-[#febc12]">proptech company</span>{" "}
-              from Serbia, Novi Sad, which provides technology that makes home
-              buying intelligent and seamless. We were asked to create a new{" "}
-              <span className="font-bold text-[#febc12]">
-                presentation website
-              </span>
-              . From the start of the project, we knew we wanted to create an
-              absolutely stunning website. Our client’s willingness to give us
-              total creative freedom was crucial, and boosted our motivation to
-              produce something unseen at the time.
+            Their services cover everything from consultancy and planning stages to the construction and execution of sports complexes and grounds. Additionally, GameOn Solution undertakes maintenance, repair, and upgrade projects for existing facilities. With an in-house engineering and project team equipped with state-of-the-art design tools and high-quality materials, they ensure efficient implementation of projects.
             </p>
             <div className="flex justify-end mt-4">
               <div className="w-2 h-2 bg-gold rounded-full"></div>
@@ -246,11 +191,19 @@ const GameOnSolution = () => {
           </div>
         </div>
         <div className="w-full flex items-start justify-start xl:px-36 px-5">
-          <button className="border border-[#febc12] text-[#febc12] rounded-full px-4 py-2  w-[50%] xl:w-[15%]">
+          <button 
+           onMouseEnter={() =>setHovered(true)}
+           onMouseLeave={() => setHovered(false)}
+          onClick={() =>{
+            navigate('/projects/gozen-cal')
+          }} className="border border-[#febc12] text-[#febc12] rounded-full px-4 py-2  w-[50%] xl:w-[15%]">
             NEXT WORK{" "}
           </button>
         </div>
-        <div className="xl:px-5 px-5 w-full  flex-col flex gap-14 justify-center items-center">
+        <div
+         onMouseEnter={() =>setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+          className="xl:px-5 px-5 w-full  flex-col flex gap-14 justify-center items-center">
           <motion.div
             className="flex xl:h-[110vh]  h-[23vh] justify-center items-center w-full xl:w-[90%]" // Center the image card
           >
@@ -258,7 +211,7 @@ const GameOnSolution = () => {
               className=" h-full w-full rounded-2xl"
               backgroundColor={"#febc12"}
               imageUrl={
-                "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
+                "/gozencal.png"
               }
             />
           </motion.div>

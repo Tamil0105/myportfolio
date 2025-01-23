@@ -24,6 +24,7 @@ export const ProjectPage = () => {
         "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
       backgroundColor: "#1D4ED8",
       title: "Game On Solution",
+      windowOpen:false,
       path:"game-on-solution"
     },
     {
@@ -33,6 +34,7 @@ export const ProjectPage = () => {
         "/gozencal.png",
       backgroundColor: "#1D4ED8",
       title: "GoZen Cal",
+      windowOpen:false,
       path: "gozen-cal",
     },
     {
@@ -42,6 +44,7 @@ export const ProjectPage = () => {
         "/formsGozen.jpg",
       backgroundColor: "#1D4ED8",
       title: "GoZen Forms",
+      windowOpen:false,
       path: "gozen-forms",
     },
     {
@@ -50,18 +53,20 @@ export const ProjectPage = () => {
       imageUrl:
         "/rental1.png",
       backgroundColor: "#1D4ED8",
+      windowOpen:false,
       title: "Selvam Rental Management",
-      path:"game-on-solution"
+      path:"rental-management"
 
     },
     {
       description: "Platform for court bookings at sports facilities",
       category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
       imageUrl:
-        "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+        "/ass1.png",
       backgroundColor: "#1D4ED8",
       title: "Assessment",
-      path:"assessment"
+      windowOpen:true,
+      path:"https://quizz-app-v1.vercel.app"
 
     },
     {
@@ -71,7 +76,8 @@ export const ProjectPage = () => {
         "/ai-componet-generator.png",
       backgroundColor: "#1D4ED8",
       title: "Ai-Components-Generator",
-      path:"ai-components-generator"
+      windowOpen:true,
+      path:"https://component-developer.vercel.app/"
 
     },
     {
@@ -81,7 +87,8 @@ export const ProjectPage = () => {
         "/book-app.png",
       backgroundColor: "#1D4ED8",
       title: "Booking App",
-      path:"booking-app"
+      windowOpen:true,
+      path:"https://next-book-app-chi.vercel.app"
 
     },
   ];
@@ -168,7 +175,11 @@ export const ProjectPage = () => {
                 <span className="flex absolute bottom-6   w-full  left-12 ">
                   <Button2
                    onClick={() =>{
-                    navigate(data.path)
+
+                    if(data.windowOpen){
+                      console.log("ddddddd")
+                    }
+                    data.windowOpen?window.open(data.path):navigate(data.path)
                    }}
                     classNames="px-7 py-2 absolute"
                     text={wholePageContent.work.buttonText}
